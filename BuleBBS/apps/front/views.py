@@ -64,7 +64,6 @@ class SingupView(views.MethodView):
 
     def post(self):
         form = SignupForm(request.form)  # 收集表单信息
-        print('开始验证')
         if form.validate():
             telephone = form.telephone.data
             username = form.username.data
@@ -72,7 +71,6 @@ class SingupView(views.MethodView):
 
             # 前台用户模型数据添加到数据库
             user = Front_User(telephone=telephone, username=username, password=password)
-            print('添加用户成功')
             db.session.add(user)
             db.session.commit()  # 提交到数据库
 
