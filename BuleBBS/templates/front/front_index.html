@@ -1,0 +1,63 @@
+{% extends 'front/front_base.html' %}
+
+{% block title %}
+    首页
+{% endblock %}
+
+<!-- 模板继承 -->
+{% block main_content %}
+    <!--   居中样式  -->
+    <div class="main-container">
+        <div class="lg-container">
+            <!-- bootstrop中复制来的轮播图  -->
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- 指令 -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+
+      <!-- 轮播图 -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+    <!--    轮播图路径    -->
+          <img src=".\static\common\images\logo.png" alt="...">
+          <div class="carousel-caption">
+            ...
+          </div>
+        </div>
+        <div class="item">
+    <!--   轮播图路径      -->
+          <img src=".\static\common\images\1.png" alt="...">
+          <div class="carousel-caption">
+            ...
+          </div>
+        </div>
+    <!--  不同轮播图    -->
+          <div class="item">
+    <!--   轮播图路径      -->
+          <img src=".\static\common\images\2.png" alt="...">
+          <div class="carousel-caption">
+            ...
+          </div>
+        </div>
+        ...
+      </div>
+
+      <!-- 轮播图左右切换按钮 -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+            <!-- bootstrop中复制来的轮播图 代码结束   -->
+
+        </div>
+    </div>
+    <!--  居中样式  -->
+{% endblock %}
